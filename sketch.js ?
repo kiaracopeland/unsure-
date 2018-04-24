@@ -1,0 +1,33 @@
+
+
+
+//The setup function only happens once
+function setup() {
+	createCanvas(720, 400); //create a 500px X 500px canvas
+	stroke(255)
+	noLoop()
+	y= height * 0.8
+}
+
+//The draw function happens over and over again
+function draw() {
+  background(173,216,230); //an RGB color for the canvas' background
+  //circle
+  stroke(255,255,127) // an RGB color for the circle's border
+  fill(255,255,127,150); // an RGB color for the inside of the circle (the last number refers to transparency (min. 0, max. 255))
+  ellipse(width/2,height/2,20,20); // center of canvas, 20px dia
+}
+
+//The statements in draw() are executed until the program is stopped. Each statement is executes in sequence and after the last line is read, the first line is executed again.
+function draw() {
+background ()
+y=y-4;
+if (y<52) {
+	y=height;
+}
+line(0, y, width, y);
+}
+
+funtion mousePressed(){
+	redraw();
+}
